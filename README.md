@@ -1,45 +1,59 @@
-# Ejercicio 1: Sistema de alquiler de vehículos RentaESFOT 
+# Ejercicio 3: Sistema de ventas de la tienda en línea ShopESFOT
 
 ## Enunciado
->La empresa RentaESFOT alquila dos tipos de vehículos: autos y camionetas. Todos los vehículos tienen placa, marca, modelo y tarifa diaria base. Además, el auto registra el número de puertas y si tiene aire acondicionado, y la camioneta registra su capacidad de carga en toneladas.
-La tarifa diaria real depende del tipo. Si el auto tiene aire acondicionado, a la tarifa base se le suman $10. A la camioneta se le aplica un recargo del 15 % sobre la tarifa base cuando su capacidad de carga supera las 1.5 toneladas. 
+>La tienda ShopESFOT vende productos físicos y digitales. Todos los productos tienen código, nombre y precio. El producto físico registra además su peso en kilogramos, y el producto digital su tamaño en megabytes.
+Al producto físico se le suma un costo de envío de $2.50 más $0.80 por kilogramo. Si al registrarlo no se indica el peso, se toma 1 kg. El producto digital no paga envío.
+El cliente arma un carrito con varios productos y al pagar puede usar un cupón de descuento del 10 %. Los cupones válidos son ESFOT10 y POO10, y cada uno se puede usar una sola vez. Además, la tienda puede crear una variante de un producto que ya existe: una copia con otro código y otro precio, que conserva el resto de sus datos.
 
-## El sistema deberá: 
+## El sistema deberá:
 
-- Registrar autos y camionetas. No se puede registrar dos veces la misma placa.
-- Mostrar todos los vehículos registrados con su tarifa diaria real.
-- Cotizar un alquiler por placa y número de días, con o sin un porcentaje de descuento.
-- Mostrar qué vehículo tiene la tarifa diaria más alta y el promedio de las tarifas diarias.
-- Mostrar mensajes controlados si la tarifa o la carga es negativa, si los días son 0 o menos, si el descuento no está entre 0 y 50 %, si la placa no existe, si la lista está vacía o si la opción no es válida.
+- Registrar productos físicos, con o sin peso, y productos digitales. No se puede repetir el código.
+- Crear una variante de un producto existente.
+- Mostrar el catálogo con el precio final de cada producto.
+- Agregar productos al carrito, de a uno o indicando la cantidad.
+- Pagar: mostrar el total, aplicar el cupón si es válido y no se ha usado, y vaciar el carrito.
+- Mostrar mensajes controlados si el precio o el peso es negativo, si la cantidad es 0 o menos, si el código no existe, si el carrito está vacío, si el cupón no es válido o ya se usó, o si la opción no es válida.
 
 ## Salida deseada del menu en la consola:
 
 ```text
-=== SISTEMA RENTAESFOT ===
-1. Registrar Auto
-2. Registrar Camioneta
-3. Mostrar Vehículos
-4. Cotizar Alquiler
-5. Mostrar Estadísticas
-6. Salir
+--- MENÚ SHOPESFOT ---
+1. Registrar producto físico
+2. Registrar producto digital
+3. Crear variante de producto
+4. Mostrar catálogo
+5. Agregar al carrito
+6. Pagar
+7. Salir
 Ingrese opción: 
 ```
 ## Ejecucion:
 
-<p><img width="413" height="332" alt="image" src="https://github.com/user-attachments/assets/2d68ae62-dd2a-41e2-bcf8-dc21862095ae" /></p>
+<p><img width="398" height="199" alt="image" src="https://github.com/user-attachments/assets/7a7d4ee2-48e4-4fe7-8d69-e7a8cd16b77f" />
+</p>
 
-<p><img width="388" height="331" alt="image" src="https://github.com/user-attachments/assets/8c6db1f4-9f48-4147-987d-d8015a15aa04"/></p>
+<p><img width="385" height="197" alt="image" src="https://github.com/user-attachments/assets/3c0723a4-e3a7-4d42-979d-bb7aa43e4710" />
+</p>
 
-<p><img width="352" height="106" alt="image" src="https://github.com/user-attachments/assets/d8286f1b-2750-4fcb-88c5-19f08f4ac47c"" /></p>
+<p><img width="392" height="171" alt="image" src="https://github.com/user-attachments/assets/c056448c-e130-4e59-b9f5-84cee901f4c3" />
+</p>
 
-<p><img width="398" height="285" alt="image" src="https://github.com/user-attachments/assets/020412e1-24db-4426-943c-5da16846b393"" /></p>
+<p><img width="330" height="133" alt="image" src="https://github.com/user-attachments/assets/e59126ea-ce8c-44b0-a116-f07cd215b057" />
+</p>
 
-<p><img width="698" height="89" alt="image" src="https://github.com/user-attachments/assets/81a151cd-27b8-4700-b107-a095d80002a2"" /></p>
+<p><img width="371" height="115" alt="image" src="https://github.com/user-attachments/assets/af1e9047-94a8-4b40-9c66-2a02b3bd4245" />
+</p>
 
-<p><img width="291" height="136" alt="image" src="https://github.com/user-attachments/assets/b2d3948c-ac32-4719-8812-48997838b9d0"" /></p>
+<p><img width="310" height="115" alt="image" src="https://github.com/user-attachments/assets/445efe8a-3fe0-420f-b906-332a81847445" />
+</p>
 
-<p><img width="447" height="87" alt="image" src="https://github.com/user-attachments/assets/26488b19-527e-40ba-9e80-8f519d98e653"" /></p>
+<p><img width="311" height="114" alt="image" src="https://github.com/user-attachments/assets/73e16cac-f28a-4e5e-8ded-0ccc95d979ba" />
+</p>
 
-<p><img width="201" height="80" alt="image" src="https://github.com/user-attachments/assets/8908da62-9c87-4d3a-b3d3-d7a9596c1312"" /></p>
+<p><img width="403" height="154" alt="image" src="https://github.com/user-attachments/assets/063337cc-8564-41bc-baed-3d4b6d6cafa8" />
+</p>
+
+<p><img width="183" height="75" alt="image" src="https://github.com/user-attachments/assets/c4b41cfc-776f-4e8a-a6c5-a61c906a3eec" />
+</p>
 
 ---  
