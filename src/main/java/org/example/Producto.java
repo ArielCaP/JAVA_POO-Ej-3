@@ -1,0 +1,34 @@
+package org.example;
+
+public class Producto{
+    private String codigo;
+    private String nombre;
+    private double precio;
+
+    public Producto(String codigo, String nombre, double precio) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.precio = precio;
+    }
+    public String getCodigo() {
+        return codigo;
+    }
+    public double getPrecio() {
+        return precio;
+    }
+    public String getNombre() {
+        return nombre;
+    }
+    public double calcularPrecioFinal(){
+        return this.precio;
+    }
+    @Override
+    public String toString() {
+        return  codigo +" "+
+                nombre +" "+
+                precio;
+    }
+    public Producto crearVariante(String nuevoCodigo, double nuevoPrecio) {
+        return new Producto(nuevoCodigo,nombre, nuevoPrecio);
+    }
+}
